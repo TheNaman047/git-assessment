@@ -6,7 +6,12 @@ function routeTasks(req, res) {
     return res.end(JSON.stringify(tasks));
   }
   if (req.method === 'POST') {
-    res.writeHead(201).end();
+    let body = '';
+    req.on('data', (chunk) => { body += chunk; });
+    req.on('end', () => {
+      tasks.push(JSON.parse(body));
+      res.writeHead(201).end();
+    });
     return;
   }
   res.writeHead(405).end('method not allowed');

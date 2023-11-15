@@ -5,4 +5,4 @@ async function load() {
     tasks.map((t) => `<li>${t.title}</li>`).join('');
 }
 
-load();
+document.addEventListener('DOMContentLoaded', load);

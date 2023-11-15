@@ -5,6 +5,10 @@ function routeTasks(req, res) {
     res.writeHead(200, { 'content-type': 'application/json' });
     return res.end(JSON.stringify(tasks));
   }
+  if (req.method === 'POST') {
+    res.writeHead(201).end();
+    return;
+  }
   res.writeHead(405).end('method not allowed');
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "taskflow",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": { "start": "node api/server.js", "test": "node test/run.js" }
 }

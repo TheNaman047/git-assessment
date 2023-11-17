@@ -5,4 +5,4 @@ function routeComments(req, res) {
   res.end(JSON.stringify(comments));
 }
 
-module.exports = { routeComments };
+module.exports = { routeComments, comments };

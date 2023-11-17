@@ -5,4 +5,9 @@ async function load() {
     tasks.map((t) => `<li>${t.title}</li>`).join('');
 }
 
+async function loadLabels() {
+  const res = await fetch('/labels');
+  return res.json();
+}
+
 load();
